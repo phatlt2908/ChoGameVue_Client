@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import $user from '../services/user'
 
 import layoutFull from '@/components/layout/layout-full'
+import layoutDefault from '@/components/layout/layout-default'
 
 Vue.use(Router)
-
-export default new Router({
+var router = new Router({
   mode: 'history',
   routes: [
+    {
+      path: '/',
+      redirect: '/login'
+    },
     {
       path: '/',
       component: layoutFull,
@@ -30,6 +35,39 @@ export default new Router({
           }
         }
       ]
+    },
+    {
+      path: '/',
+      component: layoutDefault,
+      children: [
+        {
+          path: 'login',
+          component: () => import('@/components/authentication/login'),
+          name: 'login',
+          meta: {
+            title: 'Login'
+          }
+        },
+      ]
+    },
+    {
+      path: '*',
+      redirect: '/page-not-found'
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if ($user.logged === false && ['login', 'forgot', 'reset'].indexOf(to.name) === -1) {
+    next('/login')
+  }
+  else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {
+    next('/home')
+  }
+  else {
+    document.title = to.meta.title + ' | Chợ Game'
+    next()
+  }
+})
+
+export default router
