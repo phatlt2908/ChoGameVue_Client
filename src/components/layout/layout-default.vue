@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-    <main class="main">
-      <router-view></router-view>
-    </main>
-  </div>
+  <body>
+    <router-view></router-view>
+  </body>
 </template>
 
 <script>
@@ -12,3 +10,10 @@
     name: 'layout-default'
   }
 </script>
+
+<style scoped>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+</style>

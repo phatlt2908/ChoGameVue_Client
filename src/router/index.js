@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import $user from '../services/user'
+import $api from '../services/api'
 
 import layoutFull from '@/components/layout/layout-full'
 import layoutDefault from '@/components/layout/layout-default'
@@ -27,7 +28,7 @@ var router = new Router({
         },
         {
           path: 'home',
-          component: () => import('@/components/HomePage'),
+          component: () => import('@/components/homePage'),
           name: 'home',
           meta: {
             title: 'Home',
