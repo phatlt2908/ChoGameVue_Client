@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import $user from '../services/user'
 import $api from '../services/api'
 
-import layoutFull from '@/components/layout/layout-full'
-import layoutDefault from '@/components/layout/layout-default'
+import layoutFull from '@/components/layout/layoutFull'
+import layoutDefault from '@/components/layout/layoutDefault'
 
 Vue.use(Router)
 var router = new Router({
@@ -28,11 +28,20 @@ var router = new Router({
         },
         {
           path: 'home',
-          component: () => import('@/components/homePage'),
+          component: () => import('@/components/page/home'),
           name: 'home',
           meta: {
             title: 'Home',
             active: 'home'
+          }
+        },
+        {
+          path: 'products',
+          component: () => import('@/components/page/productList'),
+          name: 'products',
+          meta: {
+            title: 'Products list',
+            active: 'products'
           }
         }
       ]

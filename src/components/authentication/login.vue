@@ -18,7 +18,7 @@
               <input type="checkbox" class="form-check-input">
               <small>Remember Me</small>
               </label>
-              <button class="btn btn-login float-right" @click="login()">Submit</button>
+              <button class="btn btn-login float-right" @click="login()" :disabled="posting">Submit</button>
             </div>
           </div>
           <div class="copy-text">Created with <i class="fa fa-heart"></i> by Grafreez</div>
@@ -71,27 +71,36 @@ export default {
   name: "Login",
   data() {
     return {
+      posting: false,
       username: '',
       password: ''
-    };
+    }
   },
   mounted() {
     
   },
   methods: {
     login() {
+      this.posting = true
       this.$api
         .login(this.username, this.password)
-        .then(res => {
-          console.log(res)
+        .then((res) => {
+          this.posting = false
+          console.log('>> res.data: ', res.data)
+          if (res.data && this.$user.login(res.data)) {
+            this.$api.setHeadersAccessToken(this.$user.getAccessToken())
+            this.$router.push('/home')
+          } else {
+            this.$notify.error(undefined, this.$message.login['failure'])
+          }
         })
         .catch(error => {
-          console.log("error")
+          console.log('>> error: ', error)
           this.$forceUpdate()
-        });
+        })
     }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -103,8 +112,8 @@ export default {
     /* Chrome 10-25, Safari 5.1-6 */
      background: linear-gradient(to bottom, #FFB88C, #DE6262);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-     float:left;
-     width:100%;
+     float: left;
+     width: 100%;
      height: 100%;
      padding : 50px 0;
 }

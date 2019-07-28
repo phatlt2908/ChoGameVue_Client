@@ -5,11 +5,13 @@ const USER_DATA = 'user'
 var user = {
   logged: false,
   // User data:
-  email: '',
+  username: '',
   accessToken: '',
 
   login(data) {
-    if (data['email'] && data['accessToken']) {
+    console.log('>> data: ', data['accessToken'])
+    if (data.user.username && data['accessToken']) {
+      console.log('>> ok')
       this.logged = true
       this.setData(data)
       this.saveData()
@@ -18,12 +20,12 @@ var user = {
     return false
   },
   setData(data) {
-    this.email = data['email']
+    this.username = data['username']
     this.accessToken = data['accessToken']
   },
   saveData() {
     var data = {
-      email: this.email,
+      username: this.username,
       accessToken: this.accessToken
     }
     localStorage.setItem(USER_DATA, JSON.stringify(data))
