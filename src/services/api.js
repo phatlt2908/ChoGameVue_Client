@@ -3,7 +3,7 @@ import Axios from 'axios'
 import $user from './user'
 
 var axios = Axios.create({
-  baseURL: `http://localhost:8081`
+  baseURL: `http://localhost:8081/v1/api`
 })
 
 var api = {
@@ -22,6 +22,15 @@ var api = {
 
   getAllProducts() {
     return axios.get('/market/get-all-products')
+  },
+
+  getAllCategory(keywords) {
+    return axios.post('/list/category', {
+      'pagination': null,
+      'queries': {
+        'keywords': keywords
+      }
+    })
   }
 }
 

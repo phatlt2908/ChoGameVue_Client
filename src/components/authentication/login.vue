@@ -86,7 +86,6 @@ export default {
         .login(this.username, this.password)
         .then((res) => {
           this.posting = false
-          console.log('>> res.data: ', res.data)
           if (res.data && this.$user.login(res.data)) {
             this.$api.setHeadersAccessToken(this.$user.getAccessToken())
             this.$router.push('/home')

@@ -1,16 +1,25 @@
 <template>
-  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal">
-        <router-link to="/home" class="navbar-brand d-flex align-items-center"><strong>Chợ Game</strong></router-link>
-      </h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <router-link to="/products" class="p-2 text-dark">Tất cả</router-link>
-        <router-link to="/abc" class="p-2 text-dark">Enterprise</router-link>
-        <router-link to="/home" class="p-2 text-dark">Support</router-link>
-        <router-link to="/home" class="p-2 text-dark">Pricing</router-link>
-      </nav>
-      <a class="btn btn-outline-primary" href="#">Rao bán acc</a>
-    </div>
+  <header class="my-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="#">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="my-header-logo text-dark" href="#">Large</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            </a>
+            <a class="text-muted mx-2" href="#">
+              <font-awesome-icon icon="bell" />
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+          </div>
+        </div>
+        
+      </header>
+      
 </template>
 
 <script>
@@ -27,5 +36,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
 </style>

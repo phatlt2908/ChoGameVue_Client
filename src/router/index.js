@@ -12,7 +12,7 @@ var router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/home'
     },
     {
       path: '/',
@@ -67,17 +67,17 @@ var router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  if ($user.logged === false && ['login', 'forgot', 'reset'].indexOf(to.name) === -1) {
-    next('/login')
-  }
-  else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {
-    next('/home')
-  }
-  else {
-    document.title = to.meta.title + ' | Chợ Game'
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   if ($user.logged === false && ['login', 'forgot', 'reset'].indexOf(to.name) === -1) {
+//     next('/login')
+//   }
+//   else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {
+//     next('/home')
+//   }
+//   else {
+//     document.title = to.meta.title + ' | Chợ Game'
+//     next()
+//   }
+// })
 
 export default router

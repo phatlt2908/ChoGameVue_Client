@@ -9,9 +9,7 @@ var user = {
   accessToken: '',
 
   login(data) {
-    console.log('>> data: ', data['accessToken'])
     if (data.user.username && data['accessToken']) {
-      console.log('>> ok')
       this.logged = true
       this.setData(data)
       this.saveData()
