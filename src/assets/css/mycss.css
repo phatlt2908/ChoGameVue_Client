@@ -1,4 +1,4 @@
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.2); }
 
 .my-header {
   line-height: 1;

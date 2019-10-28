@@ -51,7 +51,8 @@
       <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
         <router-link :to="{name: 'home'}">
           <div class="card mb-4 box-shadow">
-            <div class="card-bg" :style="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + item.urlBanner + ')'}">
+            <div class="card-bg" :style="{'background-image': 'url(' + item.urlBanner + ')'}">
+            <!-- <div class="card-bg" :style="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + item.urlBanner + ')'}"> -->
               <div class="card-bg-text">
                 <h2>{{item.name}}</h2>
               </div>
@@ -163,6 +164,10 @@ a {
   display: none;
   top: 100%;
   width: 100%;
+  background-color: white;
+  border-left: #42b983 1px solid;
+  border-right: #42b983 1px solid;
+  border-bottom: #42b983 1px solid;
   z-index: 9;
 }
 
