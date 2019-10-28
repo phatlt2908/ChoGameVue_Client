@@ -1,11 +1,15 @@
 <template>
-  <header class="my-header py-3">
+  <header class="my-header py-3 container">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
             <a class="text-muted" href="#">Subscribe</a>
           </div>
           <div class="col-4 text-center">
-            <a class="my-header-logo text-dark" href="#">Large</a>
+            <router-link class="my-header-logo" :to="{name: 'home'}">
+              <div>
+                GA<span>ME -&nbsp;</span>MA<span>KET -&nbsp;</span>TRA<span>DE</span>
+              </div>
+            </router-link>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
@@ -36,5 +40,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  
+  .my-header-logo span {
+    max-width: 0;
+    -webkit-transition: max-width 1s;
+    transition: max-width 1s;
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .my-header-logo:hover span {
+    max-width: 7rem;
+  }
 </style>

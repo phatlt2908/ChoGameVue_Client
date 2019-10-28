@@ -3,7 +3,7 @@ import Axios from 'axios'
 import $user from './user'
 
 var axios = Axios.create({
-  baseURL: `http://localhost:8081/v1/api`
+  baseURL: `http://localhost:8081/gamatra/v1/api`
 })
 
 var api = {

@@ -6,12 +6,14 @@
 }
 
 .my-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
+  color: gray;
+  transition: color 0.5s;
 }
 
 .my-header-logo:hover {
   text-decoration: none;
+  color: #009688;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -38,6 +40,14 @@
   left: 0;
   min-width: 100%;
   height: 32rem;
+}
+
+.btn:hover {
+  background-color: #009688;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* RESPONSIVE CSS

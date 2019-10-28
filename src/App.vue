@@ -1,5 +1,5 @@
 <template>
-<div id="content" class="container">
+<div id="content" class="container-flud">
   <router-view/>
 </div>
 </template>

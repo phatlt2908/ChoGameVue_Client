@@ -48,48 +48,45 @@
       </a>
     </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+      <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
+        <router-link :to="{name: 'home'}">
+          <div class="card mb-4 box-shadow">
+            <div class="card-bg" :style="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + item.urlBanner + ')'}">
+              <div class="card-bg-text">
+                <h2>{{item.name}}</h2>
               </div>
-              <small class="text-muted">9 mins</small>
+            </div>
+            <div class="card-body box-shadow">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">{{item.name}}</div>
+                <small class="text-muted">9 mins</small>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <div class="category" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.w3schools.com/howto/photographer.jpg')">
-
-          </div>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small class="text-muted">9 mins</small>
-            </div>
-          </div>
-        </div>
+        </router-link>
       </div>
     </div>
+
+    <div v-show="isLoading">
+      <dotLoading></dotLoading>
+    </div>
+    
   </div>
 </template>
 
 <script>
 
+import dotLoading from '@/components/block/dotLoading'
+
 export default {
   name: 'HomePage',
+  components: {
+    'dotLoading': dotLoading
+  },
+
   data () {
     return {
+      isLoading: false,
       categoryList: []
     }
   },
@@ -100,14 +97,16 @@ export default {
 
   methods: {
     getList() {
+      this.isLoading = true
       this.$api.getAllCategory('abc')
         .then((res) => {
           if (res.data) {
-            this.categoryList = res.data.items
+            this.categoryList = res.data
+            this.isLoading = false
           }
         })
         .catch((error) => {
-          console.log(">> AVC")
+          console.log(">> AVC: " + error)
           this.loading = false
         })
     }
@@ -132,11 +131,42 @@ a {
   color: #42b983;
 }
 
-.category {
+.card-bg {
   height: 200px;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+}
+
+.card-bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-body {
+  position: absolute;
+  display: none;
+  top: 100%;
+  width: 100%;
+  z-index: 9;
+}
+
+.card:hover .card-body {
+  display: block;
 }
 </style>

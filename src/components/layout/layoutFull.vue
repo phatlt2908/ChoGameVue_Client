@@ -1,7 +1,7 @@
 <template>
   <body>
     <top></top>
-    <main class="main">
+    <main class="main-content container">
       <router-view></router-view>
     </main>
     <bottom></bottom>
@@ -20,3 +20,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .main-content {
+    min-height: 800px;
+  }
+</style>
