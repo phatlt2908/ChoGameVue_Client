@@ -1,4 +1,4 @@
-# chogamevue_client
+# gamatra
 
 > A Vue.js project
 

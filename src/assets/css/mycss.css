@@ -1,3 +1,12 @@
+body {
+  background-color: #111;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.2); }
 
 .my-header {

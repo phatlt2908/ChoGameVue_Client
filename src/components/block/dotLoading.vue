@@ -22,7 +22,6 @@ export default {}
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;

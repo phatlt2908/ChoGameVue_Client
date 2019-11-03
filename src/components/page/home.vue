@@ -47,17 +47,41 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+    <h1>Chợ game</h1>
     <div class="row">
       <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
         <router-link :to="{name: 'home'}">
-          <div class="card mb-4 box-shadow">
+          <div class="card mb-4">
             <div class="card-bg" :style="{'background-image': 'url(' + item.urlBanner + ')'}">
             <!-- <div class="card-bg" :style="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + item.urlBanner + ')'}"> -->
               <div class="card-bg-text">
                 <h2>{{item.name}}</h2>
               </div>
             </div>
-            <div class="card-body box-shadow">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="card-text">{{item.name}}</div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </router-link>
+      </div>
+    </div>
+
+    <h1>Gamatra mall</h1>
+    <div class="row">
+      <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
+        <router-link :to="{name: 'home'}">
+          <div class="card mb-4">
+            <div class="card-bg" :style="{'background-image': 'url(' + item.urlBanner + ')'}">
+            <!-- <div class="card-bg" :style="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + item.urlBanner + ')'}"> -->
+              <div class="card-bg-text">
+                <h2>{{item.name}}</h2>
+              </div>
+            </div>
+            <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="card-text">{{item.name}}</div>
                 <small class="text-muted">9 mins</small>
@@ -88,7 +112,17 @@ export default {
   data () {
     return {
       isLoading: false,
-      categoryList: []
+      categoryList: [],
+
+      pagination: {
+        currentPage: 0,
+        itemsPerPage: 0,
+        sort: null,
+        sortOrder: true
+      },
+      queries: {
+        keywords: ""
+      }
     }
   },
 
@@ -99,15 +133,16 @@ export default {
   methods: {
     getList() {
       this.isLoading = true
-      this.$api.getAllCategory('abc')
+      this.$api.getAllCategory({ queries: this.queries, pagination: this.pagination })
         .then((res) => {
           if (res.data) {
-            this.categoryList = res.data
+            this.categoryList = res.data.items
             this.isLoading = false
           }
         })
         .catch((error) => {
-          console.log(">> AVC: " + error)
+          console.log(error)
+          this.$swal.error(undefined, "Không thể tải danh sách game");
           this.loading = false
         })
     }
@@ -130,48 +165,5 @@ li {
 }
 a {
   color: #42b983;
-}
-
-.card-bg {
-  height: 200px;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card-bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
-}
-
-.card-text {
-  color: black;
-}
-
-.card-body {
-  position: absolute;
-  display: none;
-  top: 100%;
-  width: 100%;
-  background-color: white;
-  border-left: #42b983 1px solid;
-  border-right: #42b983 1px solid;
-  border-bottom: #42b983 1px solid;
-  z-index: 9;
-}
-
-.card:hover .card-body {
-  display: block;
 }
 </style>

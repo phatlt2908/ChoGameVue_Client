@@ -1,0 +1,47 @@
+.card {
+  background-color: #000;
+  border: none;
+}
+
+.card-bg {
+  height: 200px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-body {
+  position: absolute;
+  display: none;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  border-left: #42b983 1px solid;
+  border-right: #42b983 1px solid;
+  border-bottom: #42b983 1px solid;
+  z-index: 9;
+}
+
+.card:hover .card-body {
+  display: block;
+}

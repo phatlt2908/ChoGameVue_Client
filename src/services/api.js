@@ -24,13 +24,8 @@ var api = {
     return axios.get('/market/get-all-products')
   },
 
-  getAllCategory(keywords) {
-    return axios.post('/list/category', {
-      'pagination': null,
-      'queries': {
-        'keywords': keywords
-      }
-    })
+  getAllCategory(data) {
+    return axios.post('/list/category', data)
   }
 }
 
