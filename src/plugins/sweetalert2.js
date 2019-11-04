@@ -22,7 +22,8 @@ Object.defineProperty(Swal, "error", {
       type: "error",
       title: title,
       html: text,
-      confirmButtonText: confirmButtonText
+      confirmButtonText: confirmButtonText,
+      confirmButtonColor: "#009688"
     }).then(() => {
       if (next) {
         next();
@@ -62,6 +63,23 @@ Object.defineProperty(Swal, "confirm", {
         next();
       } else if (cancel) {
         cancel();
+      }
+    });
+  }
+});
+
+Object.defineProperty(Swal, "toast", {
+  value: function(title = "", next) {
+    this.fire({
+      title: title,
+      toast: true,
+      timer: 4000,
+      position: "bottom-start",
+      showConfirmButton: false,
+      type: "info"
+    }).then(() => {
+      if (next) {
+        next();
       }
     });
   }

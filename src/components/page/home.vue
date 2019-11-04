@@ -133,6 +133,7 @@ export default {
   methods: {
     getList() {
       this.isLoading = true
+      this.$swal.toast("Tải danh sách game");
       this.$api.getAllCategory({ queries: this.queries, pagination: this.pagination })
         .then((res) => {
           if (res.data) {
