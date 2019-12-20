@@ -47,6 +47,20 @@ var router = new Router({
       ]
     },
     {
+      path: '/seller/',
+      component: layoutFull,
+      children: [
+        {
+          path: 'add-product',
+          component: () => import('@/components/page/addProduct'),
+          name: 'addProduct',
+          meta: {
+            title: 'Add product'
+          }
+        }
+      ]
+    },
+    {
       path: '/',
       component: layoutDefault,
       children: [
@@ -67,17 +81,18 @@ var router = new Router({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   if ($user.logged === false && ['login', 'forgot', 'reset'].indexOf(to.name) === -1) {
-//     next('/login')
-//   }
-//   else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {
-//     next('/home')
-//   }
-//   else {
-//     document.title = to.meta.title + ' | Chợ Game'
-//     next()
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  console.log(">> ", to)
+  if ($user.logged === false && to.path.indexOf('/seller/') > -1) {
+    next('/login')
+  }
+  else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {
+    next('/home')
+  }
+  else {
+    document.title = to.meta.title + ' | Gamatra'
+    next()
+  }
+})
 
 export default router
