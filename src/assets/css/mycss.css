@@ -1,5 +1,5 @@
 body {
-  background-color: #111;
+  background-color: #fff;
 }
 
 h1 {
@@ -12,17 +12,7 @@ h1 {
 .my-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
-}
-
-.my-header-logo {
-  font-size: 1.5rem;
-  color: gray;
-  transition: color 0.5s;
-}
-
-.my-header-logo:hover {
-  text-decoration: none;
-  color: #009688;
+  background-image: linear-gradient(to right,#ee3e80 0,#ff6ea4 100%);
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -51,8 +41,14 @@ h1 {
   height: 32rem;
 }
 
+.btn-outline-white {
+  color: #fff;
+  border-color: #fff;
+}
+
 .btn:hover {
-  background-color: #009688;
+  background-color: #fff;
+  color: #000;
 }
 
 a:hover {

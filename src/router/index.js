@@ -46,20 +46,20 @@ var router = new Router({
         }
       ]
     },
-    {
-      path: '/seller/',
-      component: layoutFull,
-      children: [
-        {
-          path: 'add-product',
-          component: () => import('@/components/page/addProduct'),
-          name: 'addProduct',
-          meta: {
-            title: 'Add product'
-          }
-        }
-      ]
-    },
+    // {
+    //   path: '/admin/',
+    //   component: layoutFull,
+    //   children: [
+    //     {
+    //       path: 'add-product',
+    //       component: () => import('@/components/page/addProduct'),
+    //       name: 'addProduct',
+    //       meta: {
+    //         title: 'Add product'
+    //       }
+    //     }
+    //   ]
+    // },
     {
       path: '/',
       component: layoutDefault,
@@ -83,7 +83,7 @@ var router = new Router({
 
 router.beforeEach((to, from, next) => {
   console.log(">> ", to)
-  if ($user.logged === false && to.path.indexOf('/seller/') > -1) {
+  if ($user.logged === false && to.path.indexOf('/admin/') > -1) {
     next('/login')
   }
   else if ($user.logged === true && ['login', 'forgot', 'reset'].indexOf(to.name) > -1) {

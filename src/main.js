@@ -4,9 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import "@/plugins/bootstrap";
-import "@/plugins/sweetalert2";
-import "@/plugins/fontawesome";
+import "@/plugins/bootstrap"
+import "@/plugins/sweetalert2"
+import "@/plugins/fontawesome"
 
 import './assets/css/mycss.css'
 import './assets/css/card.css'

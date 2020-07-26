@@ -50,7 +50,7 @@
 
     <h1>Chợ game</h1>
     <div class="row">
-      <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
+      <div class="col-md-4" v-for="item in this.categoryList" :key="item.code">
         <router-link :to="{name: 'home'}">
           <div class="card mb-4">
             <div class="card-bg" :style="{'background-image': 'url(' + item.urlBanner + ')'}">
@@ -72,7 +72,7 @@
 
     <h1>Gamatra mall</h1>
     <div class="row">
-      <div class="col-md-4" v-for="(item, key) in this.categoryList" :key="item.code">
+      <div class="col-md-4" v-for="item in this.categoryList" :key="item.code">
         <router-link :to="{name: 'home'}">
           <div class="card mb-4">
             <div class="card-bg" :style="{'background-image': 'url(' + item.urlBanner + ')'}">
