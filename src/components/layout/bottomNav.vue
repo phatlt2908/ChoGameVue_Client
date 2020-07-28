@@ -1,19 +1,19 @@
 <template>
   <div class="d-block d-sm-none">
-    <div class="fixed-bottom row no-gutters text-center shadow-lg bg-white py-1">
-      <a href="" class="col-3 active">
+    <div class="fixed-bottom row no-gutters text-center shadow-lg bg-white">
+      <a href="" class="col-3 py-1 active">
         <font-awesome-icon class="bottom-icon" icon="bell" />
         <div class="bottom-text">Trang chủ</div>
       </a>
-      <a href="" class="col-3">
+      <a href="" class="col-3 py-1">
         <font-awesome-icon class="bottom-icon" icon="bell" />
         <div class="bottom-text">Trang chủ</div>
       </a>
-      <a href="" class="col-3">
+      <a href="" class="col-3 py-1">
         <font-awesome-icon class="bottom-icon" icon="bell" />
         <div class="bottom-text">Trang chủ</div>
       </a>
-      <a href="" class="col-3">
+      <a href="" class="col-3 py-1">
         <font-awesome-icon class="bottom-icon" icon="bell" />
         <div class="bottom-text">Trang chủ</div>
       </a>
@@ -42,5 +42,14 @@ a .bottom-text {
   font-weight: 100;
   line-height: 1.5;
   color: #000;
+}
+.active .bottom-icon {
+  color: #fff;
+}
+.active .bottom-text {
+  color: #fff;
+}
+a.active {
+  background-color: #f05f95;
 }
 </style>

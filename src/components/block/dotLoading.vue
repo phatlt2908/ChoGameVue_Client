@@ -42,7 +42,7 @@ export default {}
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    background-color: #009688;
+    background-color: #f05f95;
     position: relative;
     -webkit-animation: 1.2s grow ease-in-out infinite;
     animation: 1.2s grow ease-in-out infinite;

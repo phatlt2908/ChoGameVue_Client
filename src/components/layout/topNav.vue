@@ -67,19 +67,74 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
+            <li class="nav-item">
+              <a
+                class="nav-link font-weight-bold"
+                href="#"
               >
+                <div class="nav-icon"><font-awesome-icon icon="bell" /></div>
+                {{ 'Thời trang bé gái' }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a
+                class="nav-link font-weight-bold"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="newspaper" /></div>
+                {{ 'Thời trang bé trai' }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a
+                class="nav-link font-weight-bold"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="newspaper" /></div>
+                {{ 'Thực phẩm & dinh dưỡng' }}
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a
+                class="nav-link font-weight-bold"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="newspaper" /></div>
+                {{ 'Đồ chơi & quà tặng' }}
+              </a>
+            </li>
+
+            <hr class="nav-hr" />
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="tasks" /></div>
+                Quản lý đơn hàng
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="newspaper" /></div>
+                Tin tức
+              </a>
+            </li>
+
+            <hr class="nav-hr" />
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#"
+              >
+                <div class="nav-icon"><font-awesome-icon icon="sign-in-alt" /></div>
+                Đăng nhập
+              </a>
             </li>
           </ul>
         </div>
@@ -108,5 +163,32 @@ export default {
 }
 .form-control::-webkit-input-placeholder {
   color: #faaebd;
+}
+.nav-hr {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.nav-icon {
+  background-color: #ffe9f1;
+  color: #ee3e80;
+  font-size: 18px;
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
 }
 </style>

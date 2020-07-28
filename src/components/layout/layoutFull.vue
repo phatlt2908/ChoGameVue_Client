@@ -2,10 +2,10 @@
   <body>
     <headerNav></headerNav>
     <topNav class="sticky-top"></topNav>
-    <main class="main-content container">
+    <main class="main-content">
       <router-view></router-view>
     </main>
-    <bottom></bottom>
+    <bottom class="d-sm-block d-none"></bottom>
     <bottomNav></bottomNav>
   </body>
 </template>
