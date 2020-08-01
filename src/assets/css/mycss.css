@@ -1,18 +1,20 @@
 body {
   background-color: #fff;
+  color: #333;;
 }
 
 h1 {
-  color: white;
+  color: #3567d7;
   font-size: 30px;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.2); }
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+}
 
 .my-header {
   line-height: 1;
-  border-bottom: 1px solid #e5e5e5;
-  background-image: linear-gradient(to right,#ee3e80 0,#ff6ea4 100%);
+  background-image: linear-gradient(to right, #ee3e80 0, #ff6ea4 100%);
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -76,3 +78,205 @@ a:hover {
     margin-top: 7rem;
   }
 }
+
+.the-title {
+  font-weight: 700;
+  color: #3567d7;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+}
+
+.h3,
+h3 {
+  font-size: 1.25rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.product-list.row {
+  margin-left: -9px;
+  margin-right: -9px;
+}
+
+.product-item {
+  margin-bottom: 22px;
+}
+
+.product-img {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+/* desktop */
+@media (min-width: 576px) {
+  .product-img .thumb-img {
+    display: block;
+    border: #eee solid 1px;
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .product-img .thumb-img:hover {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .hr-8 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+}
+
+/* mobile */
+@media (max-width: 576px) {
+  .product-img .thumb-img {
+    display: block;
+    border: #eee solid 1px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0px;
+    margin: 0 auto;
+  }
+
+  .product-list.row > [class*="col-"] {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .container {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .hr-8 {
+    border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+  }
+}
+
+.product-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.item-title a {
+  color: #333;
+}
+
+.h4,
+h4 {
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #ee3e80;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#xsCarousel > .carousel-inner {
+  max-height: 300px !important;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #ee3e80;
+}
+
+.text-label {
+  border-radius: 8px;
+  color: #fff;
+  font-size: 9px;
+  padding: 1px 10px;
+  text-align: center;
+}
+
+.bg-blue {
+  background-color: #3567d7!important;
+}
+
+.font-18 {
+  font-size: 18px!important;
+}
+
+.font-26 {
+  font-size: 26px!important;
+}
+
+.border-block {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: #eee solid 1px;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,.05);
+  padding: 13px;
+  margin-bottom: 17px;
+}
+
+.box-shadow-none {
+  box-shadow: none!important;
+}
+
+.checked-list li {
+  padding-left: 25px;
+  margin-bottom: 5px;
+  min-height: 14px;
+  background: url(https://concung.com/themes/mobile4.1/img/check.svg) no-repeat 0 2px;
+  background-size: 14px 14px;
+  line-height: 1.1rem;
+}
+
+.fb-block {
+
+}
+
+/* 5 COLUMN CSS */
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-5ths {
+  width: 20%;
+  flex: 0 0 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    width: 20%;
+    flex: 0 0 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    flex: 0 0 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    flex: 0 0 20%;
+    float: left;
+  }
+}
+/* END 5 COLUMN */

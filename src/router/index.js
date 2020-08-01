@@ -43,6 +43,14 @@ var router = new Router({
             title: 'Products list',
             active: 'products'
           }
+        },
+        {
+          path: 'product-detail',
+          component: () => import('@/components/page/productDetail'),
+          name: 'productDetail',
+          meta: {
+            title: 'Product detail'
+          }
         }
       ]
     },

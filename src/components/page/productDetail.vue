@@ -8,74 +8,21 @@
       <ol class="carousel-indicators">
         <li data-target="#xsCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#xsCarousel" data-slide-to="1"></li>
-        <li data-target="#xsCarousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
             class="first-slide"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            src="https://cdn.concung.com/17011-24117-large_mobile/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg"
             alt="First slide"
           />
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <h1>Example headline.</h1>
-              <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Donec id elit non mi porta gravida at eget metus. Nullam id
-                dolor id nibh ultricies vehicula ut id elit.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#" role="button"
-                  >Sign up today</a
-                >
-              </p>
-            </div>
-          </div>
         </div>
         <div class="carousel-item">
           <img
             class="second-slide"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            src="https://cdn.concung.com/17011-24116-large_mobile/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg"
             alt="Second slide"
           />
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Donec id elit non mi porta gravida at eget metus. Nullam id
-                dolor id nibh ultricies vehicula ut id elit.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#" role="button"
-                  >Learn more</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            class="third-slide"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-            alt="Third slide"
-          />
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>One more for good measure.</h1>
-              <p>
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Donec id elit non mi porta gravida at eget metus. Nullam id
-                dolor id nibh ultricies vehicula ut id elit.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#" role="button"
-                  >Browse gallery</a
-                >
-              </p>
-            </div>
-          </div>
         </div>
       </div>
       <a
@@ -261,80 +208,62 @@
 
     <!-- contain -->
 
-    <div class="container hr-8">
-      <h3 class="the-title section-title mb-2">Sản phẩm bán chạy</h3>
-      <div class="product-list row">
-        <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
-          <div class="product-item">
-            <div class="product-img">
-              <router-link to="/product-detail" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
-              </router-link>
-            </div>
-            <h4 class="item-title font-weight-normal">
-              <router-link to="/product-detail">Nhiệt kế hồng ngoại đo trán Microlife FR1MF1</router-link>
-            </h4>
-            <span class="font-weight-bold product-price">
-              1.000.000₫
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
-          <div class="product-item">
-            <div class="product-img">
-              <a href="" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
-              </a>
-            </div>
-            <h4 class="item-title font-weight-normal">
-              <a href="">Nhiệt kế hồng ngoại đo trán Microlife FR1MF1</a>
-            </h4>
-            <span class="font-weight-bold product-price">
-              1.000.000₫
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
-          <div class="product-item">
-            <div class="product-img">
-              <a href="" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
-              </a>
-            </div>
-            <h4 class="item-title font-weight-normal">
-              <a href="">Nhiệt kế hồng ngoại đo trán Microlife FR1MF1</a>
-            </h4>
-            <span class="font-weight-bold product-price">
-              1.000.000₫
-            </span>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+      <label class="text-label bg-blue mr-1">FREESHIP</label>
+      <h4 class="font-18 font-weight-normal mb-0">
+        Nhiệt kế hồng ngoại đo trán Microlife FR1MF1
+      </h4>
+      <span class="font-weight-bold product-price font-26 mb-2">
+        1.000.000₫
+      </span>
     </div>
 
     <div class="container">
-      <h3 class="the-title section-title mb-2">Sản phẩm bán chạy</h3>
+      <div class="border-block box-shadow-none">
+        <ul class="checked-list mr-2 mb-0">
+          <li>Xuất xứ: Trung Quốc</li>
+          <li>Xuất xứ: Trung Quốc</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Facebook component -->
+    <div class="mb-2 hr-8 fb-block">
+      <div
+        class="fb-page"
+        data-href="https://www.facebook.com/betoshopembe/"
+        data-tabs="timeline"
+        data-width="500"
+        data-height="300"
+        data-small-header="true"
+        data-adapt-container-width="true"
+        data-hide-cover="false"
+        data-show-facepile="true"
+        data-lazy="true"
+      >
+        <blockquote
+          cite="https://www.facebook.com/betoshopembe/"
+          class="fb-xfbml-parse-ignore"
+        >
+          <a href="https://www.facebook.com/betoshopembe/"
+            >BeTo Shop - Quần áo em bé</a
+          >
+        </blockquote>
+      </div>
+    </div>
+    <!-- End Facebook component -->
+
+    <div class="container hr-8">
+      <h3 class="the-title section-title mb-2">Sản phẩm liên quan</h3>
       <div class="product-list row">
         <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
           <div class="product-item">
             <div class="product-img">
               <a href="" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
-              </a>
-            </div>
-            <h4 class="item-title font-weight-normal">
-              <router-link to="product-detail" href="">Nhiệt kế hồng ngoại đo trán Microlife FR1MF1</router-link>
-            </h4>
-            <span class="font-weight-bold product-price">
-              1.000.000₫
-            </span>
-          </div>
-        </div>
-        <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
-          <div class="product-item">
-            <div class="product-img">
-              <a href="" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
+                <img
+                  src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg"
+                  alt=""
+                />
               </a>
             </div>
             <h4 class="item-title font-weight-normal">
@@ -349,7 +278,28 @@
           <div class="product-item">
             <div class="product-img">
               <a href="" class="thumb-img">
-                <img src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg" alt="">
+                <img
+                  src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <h4 class="item-title font-weight-normal">
+              <a href="">Nhiệt kế hồng ngoại đo trán Microlife FR1MF1</a>
+            </h4>
+            <span class="font-weight-bold product-price">
+              1.000.000₫
+            </span>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-lg-5ths col-md-5ths">
+          <div class="product-item">
+            <div class="product-img">
+              <a href="" class="thumb-img">
+                <img
+                  src="https://cdn.concung.com/17011-24117-cat/nhiet-ke-hong-ngoai-do-tran-microlife-fr1mf.jpg"
+                  alt=""
+                />
               </a>
             </div>
             <h4 class="item-title font-weight-normal">
@@ -395,6 +345,14 @@ export default {
     // this.getList();
   },
 
+  mounted() {
+    if (typeof FB === "undefined") {
+      this.fbInit();
+    } else {
+      window.FB.XFBML.parse();
+    }
+  },
+
   methods: {
     getList() {
       this.isLoading = true;
@@ -426,9 +384,5 @@ h2 {
 ul {
   list-style-type: none;
   padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 </style>
